@@ -14,8 +14,83 @@ $pale-blue: hsl(236, 100%, 87%);
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+    font-family: "Rubik", serif;
 }
 
 body{
     padding: 81px 24px;
+    background-color: $very-dark-blue;
+
+    article{
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        
+        .reportProfile{
+            display: flex;
+            flex-direction: column;
+            border-radius: 15px;
+            background-color: $dark-blue;
+            
+            > div {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 20px;
+                height: 133px;
+                background-color: $blue;
+                border-radius: 15px;
+    
+                picture{
+                    border: 3px solid #FFF;
+                    border-radius: 50%;
+    
+                    img{
+                        width: 64px;
+                        height: 64px;
+                        object-fit: cover;
+                    }
+                }
+    
+                > div{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 4px;
+    
+                    p{
+                        color: $pale-blue;
+                        font-size: 15px;
+                    }
+    
+                    h1{
+                        color: #FFF;
+                        font-size: 24px;
+                        font-weight: 300;
+                    }
+                }
+            }
+    
+            ul{
+                display: flex;
+                height: 70px;
+                list-style: none;
+    
+                li{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 100%;
+                    height: 100%;
+                    color: $desaturated-blue;
+                    font-size: 18px;
+    
+                    .active{
+                        color: #FFF;
+                    }
+                }
+            }
+        }
+    }
+
+    // > section:not(.reportProfile){}
 }
