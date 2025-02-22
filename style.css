@@ -14,6 +14,15 @@ body article {
   flex-direction: column;
   gap: 24px;
 }
+body article.dailyPeriod .dailyItem {
+  color: #FFF;
+}
+body article.weeklyPeriod .weeklyItem {
+  color: #FFF;
+}
+body article.monthlyPeriod .monthlyItem {
+  color: #FFF;
+}
 body article .reportProfile {
   display: flex;
   flex-direction: column;
@@ -30,12 +39,15 @@ body article .reportProfile > div {
   border-radius: 15px;
 }
 body article .reportProfile > div picture {
-  border: 3px solid #FFF;
+  width: 64px;
+  height: 64px;
   border-radius: 50%;
 }
 body article .reportProfile > div picture img {
   width: 64px;
   height: 64px;
+  border: 3px solid #FFF;
+  border-radius: 50%;
   object-fit: cover;
 }
 body article .reportProfile > div > div {
@@ -68,6 +80,178 @@ body article .reportProfile ul li {
 }
 body article .reportProfile ul li .active {
   color: #FFF;
+}
+body article > section:not(.reportProfile) {
+  display: flex;
+  flex-direction: column;
+  height: 160px;
+  border-radius: 15px;
+  background-color: hsl(235, 46%, 20%);
+}
+body article > section:not(.reportProfile)#work, body article > section:not(.reportProfile)#work > div:first-child {
+  background-color: hsl(15, 100%, 70%);
+}
+body article > section:not(.reportProfile)#play, body article > section:not(.reportProfile)#play > div:first-child {
+  background-color: hsl(195, 74%, 62%);
+}
+body article > section:not(.reportProfile)#study, body article > section:not(.reportProfile)#study > div:first-child {
+  background-color: hsl(348, 100%, 68%);
+}
+body article > section:not(.reportProfile)#exercise, body article > section:not(.reportProfile)#exercise > div:first-child {
+  background-color: hsl(145, 58%, 55%);
+}
+body article > section:not(.reportProfile)#social, body article > section:not(.reportProfile)#social > div:first-child {
+  background-color: hsl(264, 64%, 52%);
+}
+body article > section:not(.reportProfile)#self-care, body article > section:not(.reportProfile)#self-care > div:first-child {
+  background-color: hsl(43, 84%, 65%);
+}
+body article > section:not(.reportProfile) > div:first-child {
+  position: relative;
+  height: 38px;
+  border-radius: 15px 15px 0 0;
+  overflow: hidden;
+}
+body article > section:not(.reportProfile) > div:first-child img {
+  position: absolute;
+  top: -11px;
+  right: 18px;
+}
+body article > section:not(.reportProfile) > div:last-child {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 6px;
+  height: 122px;
+  margin-top: auto;
+  padding: 24px;
+  border-radius: 15px 15px 13px 13px;
+  background-color: hsl(235, 46%, 20%);
+  color: #FFF;
+}
+body article > section:not(.reportProfile) > div:last-child > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+body article > section:not(.reportProfile) > div:last-child > div:first-child p {
+  font-size: 18px;
+  font-weight: 500;
+}
+body article > section:not(.reportProfile) > div:last-child > div:first-child img {
+  width: 21px;
+  height: 5px;
+}
+body article > section:not(.reportProfile) > div:last-child > div:last-child h2 {
+  font-size: 32px;
+  font-weight: 300;
+}
+body article > section:not(.reportProfile) > div:last-child > div:last-child p {
+  color: hsl(236, 100%, 87%);
+  font-size: 15px;
+}
+@media (min-width: 1280px) {
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100dvh;
+  }
+  body article {
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 30px;
+    grid-row-gap: 30px;
+  }
+  body article > section:nth-child(1) {
+    grid-area: 1/1/3/2;
+  }
+  body article > section:nth-child(2) {
+    grid-area: 1/2/2/3;
+  }
+  body article > section:nth-child(3) {
+    grid-area: 1/3/2/4;
+  }
+  body article > section:nth-child(4) {
+    grid-area: 1/4/2/5;
+  }
+  body article > section:nth-child(5) {
+    grid-area: 2/2/3/3;
+  }
+  body article > section:nth-child(6) {
+    grid-area: 2/3/3/4;
+  }
+  body article > section:nth-child(7) {
+    grid-area: 2/4/3/5;
+  }
+  body article .reportProfile {
+    width: 255px;
+  }
+  body article .reportProfile > div {
+    flex-direction: column;
+    justify-content: start;
+    align-items: flex-start;
+    gap: 43px;
+    height: 354px;
+    padding: 36px 30px;
+  }
+  body article .reportProfile > div picture {
+    width: 78px;
+    height: 78px;
+  }
+  body article .reportProfile > div picture img {
+    width: 78px;
+    height: 78px;
+  }
+  body article .reportProfile > div > div {
+    gap: 3px;
+  }
+  body article .reportProfile > div > div h1 {
+    font-size: 40px;
+  }
+  body article .reportProfile > ul {
+    flex-direction: column;
+    padding: 26px 32px;
+    height: 164px;
+  }
+  body article .reportProfile > ul li {
+    justify-content: start;
+  }
+  body article .reportProfile > ul li:hover {
+    cursor: pointer;
+    color: #FFF;
+  }
+  body article > section:not(.reportProfile) {
+    height: 100%;
+  }
+  body article > section:not(.reportProfile) > div:first-child {
+    height: 45px;
+  }
+  body article > section:not(.reportProfile) > div:first-child > img {
+    top: -3px;
+  }
+  body article > section:not(.reportProfile) > div:last-child {
+    gap: 24px;
+    height: calc(100% - 45px);
+    padding: 30px;
+  }
+  body article > section:not(.reportProfile) > div:last-child:hover {
+    cursor: pointer;
+    background-color: #33397A;
+  }
+  body article > section:not(.reportProfile) > div:last-child > div:first-child img:hover {
+    filter: brightness(2);
+  }
+  body article > section:not(.reportProfile) > div:last-child > div:last-child {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  body article > section:not(.reportProfile) > div:last-child > div:last-child h2 {
+    font-size: 56px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
